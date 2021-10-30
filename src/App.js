@@ -9,6 +9,9 @@ import Blog from './Components/Blog/Blog';
 import Register from './Components/Register/Register';
 import Login from './Components/Login/Login';
 import Contact from './Components/Contact/Contact'
+import AddService from './Components/AddService/AddService';
+import NotFound from './Components/NotFound/NotFound';
+
 function App() {
   return (
     <div className="App">
@@ -16,7 +19,7 @@ function App() {
      <BrowserRouter>
      <Header></Header>
      <Switch>
-       <Route path='/'>
+       <Route exact path='/'>
 <Home></Home>
        </Route>
 
@@ -40,6 +43,11 @@ function App() {
 <Contact></Contact>
        </Route>
 
+       <Route path="/addservice">
+<AddService></AddService>
+</Route>
+
+
        <Route path="/login">
             <Login></Login>
           </Route>
@@ -48,6 +56,12 @@ function App() {
             <Register></Register>
           </Route>
 
+
+
+
+<Route path="*">
+<NotFound></NotFound>
+</Route>
      </Switch>
      
      </BrowserRouter>
