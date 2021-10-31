@@ -11,12 +11,13 @@ import Login from './Components/Login/Login';
 import Contact from './Components/Contact/Contact'
 import AddService from './Components/AddService/AddService';
 import NotFound from './Components/NotFound/NotFound';
+import AuthProvider from './Context/AuthProvider';
 
 function App() {
   return (
     <div className="App">
-   
-     <BrowserRouter>
+   <AuthProvider>
+   <BrowserRouter>
      <Header></Header>
      <Switch>
        <Route exact path='/'>
@@ -30,7 +31,7 @@ function App() {
 <Location></Location>
        </Route>
 
-       <Route path="/packages">
+       <Route path="/packages/:id">
 <Packages></Packages>
        </Route>
 
@@ -65,6 +66,8 @@ function App() {
      </Switch>
      
      </BrowserRouter>
+   </AuthProvider>
+  
     </div>
   );
 }
