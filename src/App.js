@@ -13,6 +13,7 @@ import AddService from './Components/AddService/AddService';
 import NotFound from './Components/NotFound/NotFound';
 import AuthProvider from './Context/AuthProvider';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
+import ConfirmOrders from './Components/ConfirmOrders/ConfirmOrders';
 
 function App() {
   return (
@@ -58,7 +59,10 @@ function App() {
             <Register></Register>
           </Route>
 
+<PrivateRoute path="/confirmOrders">
+<ConfirmOrders></ConfirmOrders>
 
+</PrivateRoute>
 
 
 <Route path="*">
