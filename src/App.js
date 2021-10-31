@@ -12,6 +12,7 @@ import Contact from './Components/Contact/Contact'
 import AddService from './Components/AddService/AddService';
 import NotFound from './Components/NotFound/NotFound';
 import AuthProvider from './Context/AuthProvider';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 
 function App() {
   return (
@@ -31,9 +32,9 @@ function App() {
 <Location></Location>
        </Route>
 
-       <Route path="/packages/:id">
+       <PrivateRoute path="/packages/:id">
 <Packages></Packages>
-       </Route>
+       </PrivateRoute>
 
 
        <Route path="/blog">
