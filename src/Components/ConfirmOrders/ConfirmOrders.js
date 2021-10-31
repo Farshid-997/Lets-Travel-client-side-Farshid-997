@@ -3,13 +3,13 @@ import React, { useEffect, useState } from 'react';
 const ConfirmOrders = () => {
     const[manageOrders,setmanageOrders]=useState([]);
   useEffect(()=>{
-      fetch('http://localhost:5000/orders')
+      fetch('https://chilling-moonlight-57105.herokuapp.com/orders')
       .then(res=>res.json())
       .then(data=>setmanageOrders(data))
   },[])
 
   const handleDelete=id=>{
-      const url=`http://localhost:5000/orders/${id}`
+      const url=`https://chilling-moonlight-57105.herokuapp.com/orders/${id}`
       fetch(url,{
           method:'DELETE',
 

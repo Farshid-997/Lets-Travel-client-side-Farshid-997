@@ -4,7 +4,7 @@ import './service.css';
 const Service = () => {
     const [services, setServices] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch('https://chilling-moonlight-57105.herokuapp.com/services')
             .then(res => res.json())
             .then(data => setServices(data));
     }, [])

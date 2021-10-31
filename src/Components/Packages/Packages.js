@@ -10,7 +10,7 @@ const Packages = () => {
     const [bookings, setBooking] = useState({})
     useEffect(() => {
 
-        fetch(`http://localhost:5000/services/${id}`)
+        fetch(`https://chilling-moonlight-57105.herokuapp.com/services/${id}`)
             .then(res => res.json())
             .then(data => setBooking(data))
 
@@ -19,7 +19,7 @@ const Packages = () => {
 
     const onSubmit = data =>{
       console.log(data);
-      axios.post('http://localhost:5000/orders',data)
+      axios.post('https://chilling-moonlight-57105.herokuapp.com/orders',data)
 .then(res=>{
           console.log(res)
 
