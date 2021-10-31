@@ -28,7 +28,7 @@ const Login = () => {
     <input type="email" id="email" name="email" placeholder=" Enter Your Email.."/>
 
     <label for="password">Password</label>
-    <input type="password" id="password" name="password" placeholder="Enter Your Password..."></input>
+    <input type="password" id="password" name="password" placeholder="Enter Your Password..."/>
   
     <input type="submit" value="Submit"/></form> <br />
  
