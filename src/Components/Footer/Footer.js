@@ -1,5 +1,6 @@
 import React from 'react';
 import './Footer.css'
+import img1 from './23322.jpg'
 const Footer = () => {
     return (
         <div className="footer" style={{marginTop:'50px'}}>
@@ -35,6 +36,10 @@ const Footer = () => {
                 </div>
                 <div className="clearfix"></div>
             </div>
+
+            {/* <div>
+                <img src={img1} style={{width:'150px'}}alt="" />
+            </div> */}
         </div>
     </div>
     );
