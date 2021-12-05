@@ -1,7 +1,7 @@
 import React, { useState,useEffect } from 'react';
 import ShowService from '../ShowService/ShowService'
 import './service.css';
-import { ReactTypical } from '@deadcoder0904/react-typical'
+
 import Typical from 'react-typical'
 const Service = () => {
     const [services, setServices] = useState([])
