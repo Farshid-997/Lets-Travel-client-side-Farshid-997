@@ -5,15 +5,19 @@ import { BrowserRouter,Switch,Route } from 'react-router-dom';
 import Home from './Components/Home/Home';
 import Location from './Components/Location/Location';
 import Packages from './Components/Packages/Packages';
-import Blog from './Components/Blog/Blog';
+
 import Register from './Components/Register/Register';
 import Login from './Components/Login/Login';
-import Contact from './Components/Contact/Contact'
+
 import AddService from './Components/AddService/AddService';
 import NotFound from './Components/NotFound/NotFound';
 import AuthProvider from './Context/AuthProvider';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import ConfirmOrders from './Components/ConfirmOrders/ConfirmOrders';
+import Offer from './Components/Offer/Offer';
+
+import Places from './Components/Places/Places';
+import Blog from './Components/Blog/Blog';
 
 function App() {
   return (
@@ -29,6 +33,7 @@ function App() {
        <Route path="/home">
 <Home></Home>
        </Route>
+
        <Route path="/location">
 <Location></Location>
        </Route>
@@ -42,8 +47,12 @@ function App() {
 <Blog></Blog>
        </Route>
 
-       <Route path="/contact">
-<Contact></Contact>
+       <Route path="/offer">
+<Offer></Offer>
+       </Route>
+
+       <Route path="/Places">
+<Places></Places>
        </Route>
 
        <Route path="/addservice">

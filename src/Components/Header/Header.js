@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from 'react-bootstrap';
+import { Button, Container, Form, FormControl, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
 
@@ -9,7 +9,7 @@ const Header = () => {
     return (
         <div className="header">
             <nav>
-            <NavLink to="/home">Home</NavLink>
+            <NavLink className="flex" to="/home">Home</NavLink>
                 <NavLink to="/location">Location</NavLink>
              
                 
@@ -23,6 +23,8 @@ const Header = () => {
 
                 }
             </nav>
+
+ 
         </div>
     );
 };

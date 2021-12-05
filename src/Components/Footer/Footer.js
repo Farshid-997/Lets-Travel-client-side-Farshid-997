@@ -2,8 +2,8 @@ import React from 'react';
 import './Footer.css'
 const Footer = () => {
     return (
-        <div className="footer">
-        <h2 style={{ color: 'orange', fontWeight: 'bold', padding: '5px' }}>This is Footer</h2>
+        <div className="footer" style={{marginTop:'50px'}}>
+        {/* <h2 style={{ color: 'orange', fontWeight: 'bold', padding: '5px' }}>This is Footer</h2> */}
 
         <div className="footer">
             <div className="contain">
