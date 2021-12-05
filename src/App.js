@@ -18,6 +18,7 @@ import Offer from './Components/Offer/Offer';
 
 import Places from './Components/Places/Places';
 import Blog from './Components/Blog/Blog';
+import Contact from './Components/Contacts/Contact';
 
 function App() {
   return (
@@ -45,6 +46,10 @@ function App() {
 
        <Route path="/blog">
 <Blog></Blog>
+       </Route>
+
+       <Route path="/contact">
+<Contact></Contact>
        </Route>
 
        <Route path="/offer">

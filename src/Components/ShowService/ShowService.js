@@ -2,14 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Slide from 'react-reveal/Fade';
 // import Zoom from 'react-reveal/Zoom';
-import { Col, Container, Row } from 'react-bootstrap';
+import { Col, Row } from 'react-bootstrap';
 const ShowService = ({ service }) => {
     const {_id, Name, price, description, img } = service;
     return (
         <div >
         <Row>
 
-    <Col xs={{ order: 12 }} md={{order:2}}>
+    <Col xs={12} sm={12} md={12}>
 
     <h3>{Name}</h3>
 

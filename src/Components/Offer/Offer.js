@@ -3,17 +3,16 @@ import './Offer.css'
 import img1 from './view-london-city-sunset.jpg'
 import img2 from './island-symbol-storm-architecture-manhattan.jpg'
 import img3 from './sydney-opera-house-near-beautiful-sea-clear-blue-sky.jpg'
-
-
+import { Col, Row } from 'react-bootstrap';
 const Offer = () => {
     return (
       <div style={{marginTop:'70px'}}>
+        <h2 className="mt-5">Our New Offers</h2>
 
- <h2 className="mt-5">Our New Offers</h2>
-     
-
-        <div className="coupon-Container">
-        <div className="coupon">
+   
+     <Row className="coupon-Container" >
+      <Col xs={12} sm={12} md={4}> 
+      <div className="coupon">
   <div className="container">
     <h3 style={{color:'black'}}>New Travel Package In  London</h3>
   </div>
@@ -34,10 +33,10 @@ const Offer = () => {
   </div>
   
 </div>   
+</Col>
+      <Col xs={12} sm={12} md={4}>
 
-{/* 2ND  */}
-
-<div className="coupon">
+      <div className="coupon">
   <div className="container">
     <h3  style={{color:'black'}}>New Travel Package In USA</h3>
   </div>
@@ -58,11 +57,13 @@ const Offer = () => {
     
   </div>
   
-</div>    
+</div> 
+      </Col>
 
-{/* 3RD */}
 
-<div className="coupon">
+      <Col xs={12} sm={12} md={4}>
+
+      <div className="coupon">
   <div className="container">
     <h3 style={{color:'black'}} >New Travel Package In Australia</h3>
   </div>
@@ -81,8 +82,10 @@ const Offer = () => {
     
   </div>
   
-</div>   
-        </div>
+</div> 
+      </Col>
+    </Row>
+       
       </div>
     );
 };
