@@ -1,6 +1,6 @@
 import React from 'react';
 import './Footer.css'
-import img1 from './23322.jpg'
+// import img1 from './23322.jpg'
 const Footer = () => {
     return (
         <div className="footer" style={{marginTop:'50px'}}>

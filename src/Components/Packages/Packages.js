@@ -15,7 +15,7 @@ const Packages = () => {
             .then(data => setBooking(data))
 
 
-    }, [])
+    }, [id])
 
     const onSubmit = data =>{
       console.log(data);

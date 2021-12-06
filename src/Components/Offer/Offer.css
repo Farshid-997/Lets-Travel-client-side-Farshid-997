@@ -1,10 +1,10 @@
-.coupon-Container {
+/* .coupon-Container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .coupon {
-  width: 700px;
+  width: 500px;
   border-radius: 15px;
   margin: 0 auto;
   max-width: 600px;
@@ -23,4 +23,4 @@
 
 .expire {
   color: red;
-}
+} */
