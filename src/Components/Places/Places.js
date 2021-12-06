@@ -10,20 +10,15 @@ import img3 from './R (2).jpg'
 import img4 from './R.jpg'
 import Typical from 'react-typical'
 SwiperCore.use([EffectCoverflow, Pagination]);
-
-
 const Places = () => {
-
-  return (
+return (
     <div style={{marginTop:'70px'}}>
        <Typical
         steps={['Our', 1000,  'Best Places', 2000]}
         loop={Infinity}
         wrapper="h2"
       />
-
-    
-      <Swiper
+  <Swiper
         effect={"coverflow"}
         grabCursor={true}
         centeredSlides={true}
@@ -40,16 +35,19 @@ const Places = () => {
       >
         <SwiperSlide>
           <img src={img1} alt="" />
-        
+           <p>London</p>
         </SwiperSlide>
         <SwiperSlide>
           <img src={img2} alt="" />
+          <p>Greece</p>
         </SwiperSlide>
         <SwiperSlide>
           <img src={img3} alt="" />
+          <p>Turkey</p>
         </SwiperSlide>
         <SwiperSlide>
           <img src={img4} alt="" />
+          <p>Alaska,USA</p>
         </SwiperSlide>
         <SwiperSlide>
           <img src={img1} alt="" />
