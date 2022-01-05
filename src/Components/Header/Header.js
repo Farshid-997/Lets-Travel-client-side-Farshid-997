@@ -1,30 +1,61 @@
 import React from 'react';
-import { Button } from 'react-bootstrap';
-import { NavLink } from 'react-router-dom';
-import useAuth from '../../Hooks/useAuth';
+
+import { Button, Container, Nav, Navbar } from 'react-bootstrap';
+import { LinkContainer } from "react-router-bootstrap";
 
 import './Header.css'
+import useAuth from '../../Hooks/useAuth';
+
+
 const Header = () => {
     const {user,logOut}=useAuth();
     return (
-        <div className="header">
-            <nav>
-            <NavLink className="flex" to="/home">Home</NavLink>
-                <NavLink to="/location">Location</NavLink>
-             
-                
-                <NavLink to="/blog">Blog</NavLink>
-                <NavLink to="/contact">Contact</NavLink>
-                <NavLink to="/register">Register</NavLink>
-                <NavLink to="/login">Login</NavLink>
-             {user.email && <span style={{ color: 'orange', fontWeight: 'bold' }}>Hello!!{user.displayName}</span>}
-                {
-                    user?.email && <Button onClick={logOut} variant="primary">LogOut</Button>
+      
+        <div>
+            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+  <Container>
+    
+      <Navbar.Brand >Home</Navbar.Brand>
+  
 
-                }
-            </nav>
+  <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+  <Navbar.Collapse id="responsive-navbar-nav">
+    <Nav className="me-auto">
+        <LinkContainer to="/location">
+        <Nav.Link >Location</Nav.Link>
+        </LinkContainer>
+     
+     <LinkContainer to='/blog'>
+     <Nav.Link>Blog</Nav.Link>
+     </LinkContainer>
+   
+     
+     <LinkContainer to='/contact'>
+     <Nav.Link >Contact</Nav.Link>
+     </LinkContainer>
+       
+     <LinkContainer to='/register'>
+     <Nav.Link >Register</Nav.Link>
+     </LinkContainer>
 
- 
+   
+{user.email && <span style={{ color: 'orange', fontWeight: 'bold',margin:'3px' }}>Hello!!{user.displayName} </span>}
+
+{
+        user.email?<Button onClick={logOut} variant="outline-info">LogOut</Button>:
+            <LinkContainer to='/login'>
+            <Nav.Link >Login</Nav.Link>
+            </LinkContainer>
+    
+
+        
+      }
+
+    </Nav>
+   
+  </Navbar.Collapse>
+  </Container>
+</Navbar>
         </div>
     );
 };

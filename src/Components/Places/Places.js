@@ -7,7 +7,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import img1 from './london.jpg'
 import img2 from './R (1).jpg'
 import img3 from './R (2).jpg'
-import img4 from './R.jpg'
+import img4 from './alaska.jpg'
+import img5 from './france-paris-eiffel-tower.jpg'
+import img6  from './1200px-Colosseo_2020 .jpg'
+import img7 from './bali.jpg'
+import img8 from './maldives-travel-tips-cover (1).jpg'
+import img9 from './Sydney.jpg'
 import Typical from 'react-typical'
 SwiperCore.use([EffectCoverflow, Pagination]);
 const Places = () => {
@@ -50,19 +55,24 @@ return (
           <p>Alaska,USA</p>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={img1} alt="" />
+          <img src={img5} alt="" />
+          <p>Paris,France</p>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={img2} alt="" />
+          <img src={img6} alt="" />
+          <p>Rome,Italy</p>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={img3} alt="" />
+          <img src={img7} alt="" />
+          <p>Bali,Indonesia</p>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={img4} alt="" />
+          <img src={img8} alt="" />
+          <p>Maldives</p>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={img1} alt="" />
+          <img src={img9} alt="" />
+          <p>Sydney,Australia</p>
         </SwiperSlide>
       </Swiper>
     </div>
