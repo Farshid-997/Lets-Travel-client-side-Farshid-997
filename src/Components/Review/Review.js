@@ -13,24 +13,25 @@ const Review = () => {
         <div style={url}>
             <h1>Users Review</h1>
             <Container style={{display:'flex',justifyContent:'center',alignItems:'center'}}>
-                <div>
+                <div >
                 <Image src={img1} ></Image> 
-                <div>
-                <p style={{overflowX:'hidden'}}>"Their Service is very good and they trip management is also very good.You will get the whole idea if you want to go with them."</p>    
+                <div style={{border:'1px solid green',margin:'10px',padding:'10px'}}>
+                <p style={{overflowX:'hidden'}}>"Their Service is very good and they trip management is also very good.You will get the whole idea if you want to go with them."</p>  
+
                 </div>
                
                 </div>
            <div>
            <Image src={img2} ></Image> 
-           <div>
+           <div style={{border:'1px solid green',margin:'10px',padding:'10px'}}>
                 <p style={{overflowX:'hidden'}}>"Their Service is very good and they trip management is also very good.You will get the whole idea if you want to go with them."</p>    
                 </div>
            </div>
-           
+
           <div>
 
           <Image src={img3} ></Image> 
-          <div>
+          <div style={{border:'1px solid green',margin:'10px',padding:'10px'}}>
                 <p style={{overflowX:'hidden'}}>"Their Service is very good and they trip management is also very good.You will get the whole idea if you want to go with them."</p>    
                 </div>
           </div>
