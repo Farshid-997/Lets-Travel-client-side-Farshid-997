@@ -27,7 +27,7 @@ const Header = () => {
         <Nav.Link >Location</Nav.Link>
         </LinkContainer>
      
-     <LinkContainer to='/blog'>
+     <LinkContainer to='/addblog'>
      <Nav.Link>Blog</Nav.Link>
      </LinkContainer>
    

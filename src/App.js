@@ -17,8 +17,10 @@ import ConfirmOrders from './Components/ConfirmOrders/ConfirmOrders';
 import Offer from './Components/Offer/Offer';
 
 import Places from './Components/Places/Places';
-import Blog from './Components/Blog/Blog';
+
 import Contact from './Components/Contacts/Contact';
+import AddBlogs from './Components/Blog/AddBlogs';
+
 
 function App() {
   return (
@@ -44,8 +46,8 @@ function App() {
        </PrivateRoute>
 
 
-       <Route path="/blog">
-<Blog></Blog>
+       <Route path="/addblog">
+<AddBlogs></AddBlogs>
        </Route>
 
        <Route path="/contact">
