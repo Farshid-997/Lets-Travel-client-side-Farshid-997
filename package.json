@@ -5,6 +5,9 @@
   "dependencies": {
     "@craco/craco": "^6.4.0",
     "@deadcoder0904/react-typical": "^0.1.2",
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/react-fontawesome": "^0.1.16",
     "@mui/material": "^5.0.6",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",

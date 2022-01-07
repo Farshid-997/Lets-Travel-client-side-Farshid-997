@@ -6,12 +6,16 @@ import Footer from '../Footer/Footer'
 import Offer from '../Offer/Offer'
 
 import Places from '../Places/Places';
+import Contact from '../Contacts/Contact';
+import Review from '../Review/Review';
 const Home = () => {
     return (
         <div>
            <Banner></Banner> 
          <Service></Service>
          <Offer></Offer>
+         <Contact></Contact>
+         <Review></Review>
          <Places/>
        
        <Footer></Footer>
