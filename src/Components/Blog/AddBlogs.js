@@ -1,34 +1,53 @@
-import React from 'react';
-import axios from 'axios';
-import { useForm } from "react-hook-form";
+import React,{useState} from 'react';
+import { useForm } from 'react-hook-form';
 import './Blog.css'
 const AddBlogs = () => {
-    const { register, handleSubmit,reset } = useForm();
-  
-    const onSubmit = data =>{
-        console.log(data);
-        axios.post('https://chilling-moonlight-57105.herokuapp.com/services',data)
-  .then(res=>{
-            console.log(res)
+    const {reset}=useForm()
+    const [name,setName]=useState('')
+    const [place,setPlace]=useState('')
+    const [description,setDescription]=useState('')
+    const [image,setImage]=useState(null)
+  const handleSubmit=e=>{
+    e.preventDefault()
+    if(!image){
+        return;
+    }
+    const formData=new FormData();
+    formData.append('name', name);
+formData.append('place', place);
+formData.append('description', description);
+formData.append('image', image);
 
-            if(res.data.insertedId){
-alert('addedd succefully')
+fetch('https://chilling-moonlight-57105.herokuapp.com/blog', {
+  method: 'POST',
+  body: formData
+})
+.then(response => response.json())
+.then(result => {
+  if(result.insertedId){
+
 reset()
-            }
-        })
-    } 
+  }
+})
+.catch(error => {
+  console.error('Error:', error);
+});
+}
     return (
    
           <div className='add-blog'>
            <h2>Write Your Blog</h2> 
 
-           <form onSubmit={handleSubmit(onSubmit)}>
-      <input {...register("Name")} placeholder="PlaceName"/>
-      <textarea {...register("description")} placeholder="Description"/>
-   
-      <input {...register("img")} placeholder="image url"/>
-      <input type="submit" />
-    </form>   
+         <form onSubmit={handleSubmit}>
+
+
+             <input onChange={e=>setName(e.target.value)} type="text"  placeholder='Your Name'/>
+             <input onChange={e=>setPlace(e.target.value)} type="text" placeholder="Your Place Name"/>
+           <textarea onChange={e=>setDescription(e.target.value)} type='text'placeholder='Write here..'></textarea>
+           
+           <input style={{width:'40%'}} type="file" placeholder='Choose Image' accept='image/*' onChange={e=>setImage(e.target.files[0])}  />
+           <input type="submit" />
+         </form>
         </div>
     );
 };
