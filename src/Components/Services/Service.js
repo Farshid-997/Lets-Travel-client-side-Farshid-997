@@ -3,6 +3,7 @@ import ShowService from '../ShowService/ShowService'
 import './service.css';
 
 import Typical from 'react-typical'
+import { Container, Row } from 'react-bootstrap';
 const Service = () => {
     const [services, setServices] = useState([])
     useEffect(() => {
@@ -20,13 +21,18 @@ const Service = () => {
         wrapper="p"
       />
          
-<div className="service-container">
+<div >
+    <Container className="service-container">
+<Row xs={1} sm={1} md={3} className="g-5" style={{marginLeft:'5px',paddingLeft:'5px'}}>
 {
                        services.map(service=> <ShowService
                         key={service.id}
                         service={service}
                     ></ShowService>)
                 }
+
+</Row>
+    </Container>
 
 </div>
            

@@ -14,7 +14,7 @@ const Blogs = () => {
         <div>
             <h2 style={{margin:'18px'}}>Blog of Our Travellers</h2>
             <Container className='cnt' >
-           <Row xs={1} md={3} className="g-5">
+           <Row xs={1} md={3} className="g-5" style={{marginLeft:'5px',paddingLeft:'5px'}}>
                 {
 blogs.map(blogs=><ShowBlog
 key={blogs._id}

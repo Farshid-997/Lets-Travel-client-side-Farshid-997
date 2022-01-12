@@ -7,7 +7,7 @@ const ShowBlog = (props) => {
         <div>
          
         
-           <Card  style={{ width: '18rem',backgroundColor:'#95a888' }}>
+           <Card  style={{ width: '18rem',backgroundColor:'#98BAE7' }}>
   <Card.Img variant="top" style={{padding:'5px'}} src={`data:image/png;base64,${image}`} />
   <Card.Body style={{backgroundColor:'black'}}>
     <Card.Title style={{color:'rgba(76, 223, 223, 0.925)'}} >"The Place {place} I Never Forgot"- {name}</Card.Title>

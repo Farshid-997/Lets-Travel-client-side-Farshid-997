@@ -20,6 +20,7 @@ import Places from './Components/Places/Places';
 
 import Contact from './Components/Contacts/Contact';
 import AddBlogs from './Components/Blog/AddBlogs';
+import Dashboard from './Components/Dashboard/Dashboard';
 
 
 function App() {
@@ -64,6 +65,10 @@ function App() {
 
        <Route path="/addservice">
 <AddService></AddService>
+</Route>
+
+<Route path="/dashboard">
+<Dashboard></Dashboard>
 </Route>
 
 

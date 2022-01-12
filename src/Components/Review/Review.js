@@ -5,16 +5,16 @@ import img1 from './image1_200x200.png'
 import img2 from './image2_200x200.png'
 import img3 from './image3.png'
 import img4 from './night-gaac9cc245_1920.jpg'
-
+import './Review.css'
 import { MdOutlineStar } from "react-icons/md";
 const Review = () => {
     const url={
         background:`url(${img4})`
     }
     return (
-        <div style={url}>
+        <div style={url} >
             <h1>Users Review</h1>
-            <Container style={{display:'flex',justifyContent:'center',alignItems:'center'}}>
+            <Container className="container" style={{display:'flex',justifyContent:'center',alignItems:'center'}}>
                 <div >
                 <Image src={img1} ></Image> 
                 <div style={{border:'1px solid green',margin:'10px',padding:'10px'}}>

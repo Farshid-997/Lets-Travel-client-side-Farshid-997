@@ -14,9 +14,9 @@ const AddBlogs = () => {
     }
     const formData=new FormData();
     formData.append('name', name);
-formData.append('place', place);
-formData.append('description', description);
-formData.append('image', image);
+    formData.append('place', place);
+    formData.append('description', description);
+    formData.append('image', image);
 
 fetch('https://chilling-moonlight-57105.herokuapp.com/blog', {
   method: 'POST',

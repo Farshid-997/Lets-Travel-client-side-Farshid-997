@@ -1,33 +1,36 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Slide from 'react-reveal/Fade';
-// import Zoom from 'react-reveal/Zoom';
-import { Col, Row } from 'react-bootstrap';
+import './ShowService.css'
+import {  Button, Card } from 'react-bootstrap';
 const ShowService = ({ service }) => {
-    const {_id, Name, price, description, img } = service;
+    const {_id, Name, price, description, image } = service;
     return (
         <div >
-        <Row>
+<Slide  right>
 
-    <Col xs={12} sm={12} md={12}>
+<Card style={{ width: '18rem', backgroundColor:'#FAFAD2'}}>
+   
 
-    <h3>{Name}</h3>
+<Card.Img className='card-img'  variant="top" src={`data:image/png;base64,${image}`}  />
+ <Card.Body>
+    <Card.Title style={{ color:'black'  }}>{Name}</Card.Title>
+    <Card.Text style={{ color:'black',fontWeight:'bold'  }}>
+    Tour Price is {price}BDT
+    </Card.Text>
+    <Card.Text style={{ color:'black',fontWeight:'bold'  }}>
+    {description}
+    </Card.Text>
 
-    <Slide  right >
-       
-       <img src={img} alt="" />
+    <Link to={`/packages/${_id}`}>
+    <Button variant="success">Want to Go?Click Here.</Button>
+    </Link>
+  
+  </Card.Body>
+</Card>  
 
-      
-         
-       </Slide>
-            <h5>Price: {price}</h5>
-            <p className="px-3">{description}</p>
-            <Link to={`/packages/${_id}`}>
-                <button className="btn btn-warning">Book {Name.toLowerCase()}</button>
-            </Link>  
-    </Col>
-    
-  </Row>
+</Slide>
+ 
 
         </div>
     );

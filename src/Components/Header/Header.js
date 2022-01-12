@@ -40,7 +40,15 @@ const Header = () => {
      <Nav.Link >Register</Nav.Link>
      </LinkContainer>
 
-   
+
+{
+  user.email&&
+  <LinkContainer to='/dashboard'>
+  <Nav.Link >Dashboard</Nav.Link>
+  </LinkContainer>
+}
+  
+    
 {user.email && <span style={{ color: 'orange', fontWeight: 'bold',margin:'3px' }}>Hello!!{user.displayName} </span>}
 
 {
