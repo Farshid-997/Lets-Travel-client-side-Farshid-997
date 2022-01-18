@@ -1,50 +1,62 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { NavLink, useHistory } from 'react-router-dom';
 import './Register.css';
 
 import useAuth from '../../Hooks/useAuth';
+import { Alert, Spinner } from 'react-bootstrap';
 const Register = () => {
+
+  const [loginData,setLoginData]=useState({})
+  const history=useHistory();
     const handleReg = (e) => {
         e.preventDefault()
+        registerUser(loginData.email,loginData.password,loginData.name,history)
     }
-    const { signInUsingGoogle }=useAuth();
+    const {user,registerUser,signInUsingGoogle,isLoading,authError}=useAuth();
+    const handleOnChange=(e)=>{
+      const field=e.target.name;
+      const  value=e.target.value;
+      const newloginData={...loginData}
+      newloginData[field]=value
+      console.log(newloginData)
+      setLoginData(newloginData)
+  }
     return (
         <div className="register">
                <h2>Please Register Here!!</h2>  
 
 
-             <form onSubmit={handleReg}>
-             <label for="fname">First Name</label>
-    <input type="text" id="fname" name="firstname" placeholder="Your name.."/>
-
-    <label for="lname">Last Name</label>
-    <input type="text" id="lname" name="lastname" placeholder="Your last name.."/>
+  {
+ <form onSubmit={handleReg}>
+            
+ <input type="text" id="fname"onChange={handleOnChange} name="firstname" placeholder="Your first name.."/>
 
 
-    <label for="email">Email</label>
-    <input type="email" id="email" name="email" placeholder=" Enter Your Email.."/>
-
-    <label for="password">Password</label>
-    <input type="password" id="password" name="password" placeholder="Enter Your Password..."></input>
-
-    <label for="lname">Address</label>
-    <input type="address" id="address" name="address" placeholder="Your Address.."/>
-
-    <label for="country">Country</label>
-    <select id="country" name="country">
-      <option value="australia">Australia</option>
-      <option value="canada">Canada</option>
-      <option value="usa">USA</option>
-    </select>
+ <input type="text" id="lname" onChange={handleOnChange}  name="lastname" placeholder="Your last name.."/>
 
 
+ 
+ <input type="email" id="email" onChange={handleOnChange} name="email" placeholder=" Enter Your Email.."/>
+
+ <input type="password" id="password" onChange={handleOnChange} name="password" placeholder="Enter Your Password..."></input>
+
+
+
+
+
+ <input type="submit" value="Submit"/>
+
+          </form>
+  }       
   
-    <input type="submit" value="Submit"/>
-
-             </form> <br />
-             <h4> Or Sign Up With Google:</h4>
-             <button onClick={signInUsingGoogle} className="btn btn-success mb-5 p-2" >Google Sign Up</button> <br />
-             <Link to="/login">Already Registered?</Link>
+     <div>
+     {isLoading && <Spinner/>}
+{user?.email&& <Alert variant="success" style={{width:'20%',marginLeft:'750px'}}>User Created Successfully!</Alert>}
+{authError && <Alert style={{width:'20%',marginLeft:'750px'}} variant='danger'>{authError}</Alert>}
+     </div>
+            
+             <button onClick={signInUsingGoogle} style={{width:'40%'}} className="btn btn-success mb-5 p-2" >Google Sign Up</button> <br />
+             <NavLink style={{textDecoration:'none',color:'white'}} to="/login">Already Registered?</NavLink>
 
 </div>
     );

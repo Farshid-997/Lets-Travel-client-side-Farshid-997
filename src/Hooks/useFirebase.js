@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import initializeAuthentication from '../Firebase/firebase.init'
-import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword,signOut,onAuthStateChanged,signInWithEmailAndPassword,signInWithPopup, GoogleAuthProvider,updateProfile  } from "firebase/auth";
 initializeAuthentication();
 const useFirebase=()=>{
     const [user, setUser] = useState({});
-  //  const [error, setError] = useState('')
+    const [authError,setAuthError]=useState('')
+    const[isLoading,setIsLoading]=useState(true)
+    const [admin,setAdmin]=useState(false)
 
     const auth = getAuth();
     const googleProvider = new GoogleAuthProvider();
@@ -13,6 +15,64 @@ const useFirebase=()=>{
        return signInWithPopup(auth, googleProvider)
             
     }
+
+
+    const registerUser=(email,password,name,history)=>{
+        setIsLoading(true)
+        createUserWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+      
+       setAuthError('')
+       const newUser={email,displayName:name}
+       setUser(newUser)
+  //  saveUser(email,name,'POST')
+       updateProfile(auth.currentUser, {
+        displayName: name
+        
+      }).catch((error) => {
+        
+      });
+      
+       history.replace('/')
+      })
+      .catch((error) => {
+      
+        setAuthError(error.message);
+        
+      }).finally(()=>{
+          setIsLoading(false)
+      });
+    }
+
+
+    const loginUser=(email,password,location,history)=>{
+        setIsLoading(true)
+        signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+      
+        const destination=location?.state?.from||'/'
+        history.replace(destination)
+        setAuthError('')
+      
+      })
+      .catch((error) => {
+      
+        setAuthError(error.message);
+      }).finally(()=>{
+        setIsLoading(false)
+    });
+    
+    }
+
+
+    // useEffect(()=>{
+
+    //     fetch(`http://localhost:5000/users/${user.email}`)
+    //     .then(res=>res.json())
+    //     .then(data=>setAdmin(data.admin))
+    //     },[user.email])
+        
+
     const logOut = () => {
         signOut(auth)
             .then(() => {
@@ -30,11 +90,32 @@ const useFirebase=()=>{
             }
         })
     }, [auth])
+
+
+
+    // const saveUser=(email,displayName,method)=>{
+
+    //     const user={email,displayName}
+    //     fetch('http://localhost:5000/users',{
+    //       method:method,
+    //       headers:{
+    //         'content-type':'application/json'
+    //       },
+    //       body:JSON.stringify(user)
+    //     })
+    //     .then()
+    //   }
+
+
     return {
-        user,
-        logOut,
-        signInUsingGoogle,
-        
+          user,
+    admin,
+    isLoading,
+    registerUser,
+    logOut,
+    authError,
+    loginUser,
+    signInUsingGoogle
 
     }
 }

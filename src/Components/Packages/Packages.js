@@ -32,10 +32,10 @@ reset()
     return (
        <div className="package">
 
-         <h1>Name of The Place:{bookings.Name}</h1> 
+         <h1 >{bookings.place}</h1> 
 
-<h1>Image:</h1><img src={bookings.img} alt="" /> <br />
-<h1>Price:</h1><p style={{color:'orange',fontWeight:'bold'}}>{bookings.price}</p>
+<img src={`data:image/png;base64,${bookings.image}`} alt="" />
+
 
 <h3>Now Enter Your details!!!</h3>
 <form onSubmit={handleSubmit(onSubmit)}>
@@ -46,7 +46,8 @@ reset()
       <input type="text" {...register("MobileNumber")} placeholder="MobileNumber" />
       <input type="text" {...register("NiDorPassport")} placeholder="Nid Or PassPort" />
       <input {...register("payment Method")} placeholder="Payment Option"/>
-   <Link to="/confirmOrders"> <input type="submit" />Submit</Link>  
+      <input type="submit" />
+   <Link to="/confirmOrders"> Submit</Link>  
     </form>
 
         </div>

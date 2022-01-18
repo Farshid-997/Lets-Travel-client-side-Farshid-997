@@ -49,7 +49,7 @@ const Header = () => {
 }
   
     
-{user.email && <span style={{ color: 'orange', fontWeight: 'bold',margin:'3px' }}>Hello!!{user.displayName} </span>}
+
 
 {
         user.email?<Button onClick={logOut} variant="outline-info">LogOut</Button>:
