@@ -41,7 +41,7 @@ const handleLoginSubmit=(e)=>{
 
   <input type="password" onChange={handleOnChange} id="password" name="password" placeholder="Enter Your Password..."/>
 
-  <input type="submit" value="Submit"/></form>
+  <input type="submit" value="Login"/></form>
   }     
   
  

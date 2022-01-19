@@ -44,7 +44,7 @@ const Register = () => {
 
 
 
- <input type="submit" value="Submit"/>
+ <input type="submit" value="Register"/>
 
           </form>
   }       

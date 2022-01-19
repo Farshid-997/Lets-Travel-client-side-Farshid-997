@@ -21,7 +21,7 @@ const handleSubmit=e=>{
     formData.append('price', price);
     formData.append('image', image);
 
-fetch('http://localhost:5000/services', {
+fetch('https://chilling-moonlight-57105.herokuapp.com/services', {
   method: 'POST',
   body: formData
 })
