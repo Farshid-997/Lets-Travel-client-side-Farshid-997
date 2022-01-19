@@ -1,41 +1,27 @@
 import React, { useEffect, useState } from 'react';
+import ShowOrder from './ShowOrder';
 
 const ConfirmOrders = () => {
-    const[manageOrders,setmanageOrders]=useState([]);
-  useEffect(()=>{
-      fetch('https://chilling-moonlight-57105.herokuapp.com/orders')
-      .then(res=>res.json())
-      .then(data=>setmanageOrders(data))
-  },[])
-
-  const handleDelete=id=>{
-      const url=`https://chilling-moonlight-57105.herokuapp.com/orders/${id}`
-      fetch(url,{
-          method:'DELETE',
-
-      })
-      .then(res=>res.jsoon())
-      .then(data=>console.log(data))
-  }
+    const[orders,setOrders]=useState([])
+    useEffect(()=>{
+        fetch('http://localhost:5000/orders')
+        .then(res=>res.json())
+        .then(data=>setOrders(data))
+    },[])
     return (
+     
         <div>
-            <h2>Manage Orders</h2>
-          
-{
-    manageOrders.map(mo=><div key={manageOrders._id}>
-<p>{mo.Name}</p>
-<p>{mo.description}</p>
-<p>{mo.country}</p>
-<p>{mo.packageName}</p>
-<p>{mo.MobileNumber}</p>
+            {
+  orders.map(orders=><ShowOrder
+  key={orders._id}
+  orders={orders}
+  
+  >
 
-<p>{mo.NiDorPassport}</p>
 
-<button onClick={()=>handleDelete(mo._id)}>X</button>
-
-    </div>)
-}
-
+  </ShowOrder>)
+            }
+       
         </div>
     );
 };

@@ -45,7 +45,7 @@ reset()
       <input type="text" {...register("packageName")} placeholder="Package Name" />
       <input type="text" {...register("MobileNumber")} placeholder="MobileNumber" />
       <input type="text" {...register("NiDorPassport")} placeholder="Nid Or PassPort" />
-      <input {...register("payment Method")} placeholder="Payment Option"/>
+      <input {...register("paymentMethod")} placeholder="Payment Option"/>
       <input type="submit" />
    <Link to="/confirmOrders"> Submit</Link>  
     </form>
