@@ -21,6 +21,8 @@ import Places from './Components/Places/Places';
 import Contact from './Components/Contacts/Contact';
 import AddBlogs from './Components/Blog/AddBlogs';
 import Dashboard from './Components/Dashboard/Dashboard';
+import ShowContact from './Components/ShowContact/ShowContact';
+
 
 
 function App() {
@@ -54,6 +56,12 @@ function App() {
        <Route path="/contact">
 <Contact></Contact>
        </Route>
+
+
+       <Route path="/showcontact">
+<ShowContact></ShowContact>
+       </Route>
+
 
        <Route path="/offer">
 <Offer></Offer>

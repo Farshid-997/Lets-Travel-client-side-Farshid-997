@@ -25,7 +25,7 @@ const useFirebase=()=>{
        setAuthError('')
        const newUser={email,displayName:name}
        setUser(newUser)
-  //  saveUser(email,name,'POST')
+    saveUser(email,name,'POST')
        updateProfile(auth.currentUser, {
         displayName: name
         
@@ -65,12 +65,12 @@ const useFirebase=()=>{
     }
 
 
-    // useEffect(()=>{
+    useEffect(()=>{
 
-    //     fetch(`http://localhost:5000/users/${user.email}`)
-    //     .then(res=>res.json())
-    //     .then(data=>setAdmin(data.admin))
-    //     },[user.email])
+        fetch(`http://localhost:5000/users/${user.email}`)
+        .then(res=>res.json())
+        .then(data=>setAdmin(data.admin))
+        },[user.email])
         
 
     const logOut = () => {
@@ -93,18 +93,18 @@ const useFirebase=()=>{
 
 
 
-    // const saveUser=(email,displayName,method)=>{
+    const saveUser=(email,displayName,method)=>{
 
-    //     const user={email,displayName}
-    //     fetch('http://localhost:5000/users',{
-    //       method:method,
-    //       headers:{
-    //         'content-type':'application/json'
-    //       },
-    //       body:JSON.stringify(user)
-    //     })
-    //     .then()
-    //   }
+        const user={email,displayName}
+        fetch('http://localhost:5000/users',{
+          method:method,
+          headers:{
+            'content-type':'application/json'
+          },
+          body:JSON.stringify(user)
+        })
+        .then()
+      }
 
 
     return {
