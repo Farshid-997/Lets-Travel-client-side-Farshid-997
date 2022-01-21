@@ -14,10 +14,11 @@ import {
 import ConfirmOrders from '../ConfirmOrders/ConfirmOrders';
 import Payment from './UserDashboard/Payment';
 import MakeAdmin from './AdminDashboard/MakeAdmin';
-import ManageAllOrders from './AdminDashboard/ManageAllOrders';
+
 import ShowContact from '../ShowContact/ShowContact';
 import AddBlogs from '../Blog/AddBlogs';
 import AddService from '../AddService/AddService';
+import AddReview from '../AddReview/AddReview';
 const Dashboard = () => {
     let { path, url } = useRouteMatch();
     const{admin,user}=useAuth();
@@ -86,8 +87,8 @@ const Dashboard = () => {
 <MakeAdmin></MakeAdmin>
         </Route>
 
-        <Route path={`${path}/manageallorders`}>
-<ManageAllOrders></ManageAllOrders>
+        <Route path={`${path}/addreview`}>
+<AddReview></AddReview>
         </Route>
 
         <Route path={`${path}/addblog`}>

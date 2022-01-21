@@ -4,7 +4,9 @@ import img1 from './nature-ge9be872df_1920.jpg'
 import img2 from './travel-gb850b0135_1920.jpg'
 import img3  from './road-g24480aaaa_1920.jpg'
 import './Banner.css'
+//import { Link } from 'react-router-dom';
 const Banner = () => {
+  //const {_id } = props.service;
     return (
         <div>
           <Carousel fade >
@@ -17,8 +19,11 @@ const Banner = () => {
     <Carousel.Caption>
       <div style={{marginBottom:'350px'}}>
       <h3> Want to Enjoy the WildLife in Africa?!!</h3>
-      
-     <Button style={{color:'white'}} variant='outline-dark'>Book This Opportunity</Button>
+
+      {/* <Link to={`/packages/${_id}`}> */}
+      <Button style={{color:'white'}} variant='outline-dark'>Book This Opportunity</Button>
+    {/* </Link> */}
+    
       </div>
    
     </Carousel.Caption>

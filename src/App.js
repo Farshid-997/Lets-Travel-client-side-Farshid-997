@@ -22,6 +22,7 @@ import Contact from './Components/Contacts/Contact';
 import AddBlogs from './Components/Blog/AddBlogs';
 import Dashboard from './Components/Dashboard/Dashboard';
 import ShowContact from './Components/ShowContact/ShowContact';
+//import AddReview from './Components/AddReview/AddReview';
 
 
 
@@ -49,9 +50,9 @@ function App() {
        </PrivateRoute>
 
 
-       <Route path="/addblog">
+       <PrivateRoute path="/addblog">
 <AddBlogs></AddBlogs>
-       </Route>
+       </PrivateRoute>
 
        <Route path="/contact">
 <Contact></Contact>
@@ -71,9 +72,12 @@ function App() {
 <Places></Places>
        </Route>
 
-       <Route path="/addservice">
+       <PrivateRoute path="/addservice">
 <AddService></AddService>
-</Route>
+</PrivateRoute>
+
+
+
 
 <Route path="/dashboard">
 <Dashboard></Dashboard>
