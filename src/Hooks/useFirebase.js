@@ -108,7 +108,7 @@ const useFirebase=()=>{
 
 
     return {
-          user,
+    user,
     admin,
     isLoading,
     registerUser,

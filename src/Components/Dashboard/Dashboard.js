@@ -32,7 +32,7 @@ const Dashboard = () => {
           <div>
  <Link to={`${url}/confirmorders`}>User Confirm Orders</Link><br/>
   
-  <Link to={`${url}/usersreview`}>Users Review</Link><br/>
+  {/* <Link to={`${url}/usersreview`}>Users Review</Link><br/> */}
 
   <Link to={`${url}/payment`}>Payment</Link><br/>
   <Link to={`${url}/showcontact`}>User Contact</Link><br/>
@@ -45,8 +45,9 @@ const Dashboard = () => {
 {
     admin.email&& 
     <div>
+         <Link to={`${url}/confirmorders`}>User Confirm Orders</Link><br/>
         <Link to={`${url}/makeadmin`}>Make Admin</Link><br/>
- <Link to={`${url}/showcontact`}>User Contact</Link><br/>
+        <Link to={`${url}/showcontact`}>User Contact</Link><br/>
     </div>
 }
  

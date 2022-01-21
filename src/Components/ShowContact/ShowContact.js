@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import ShowUserContact from './ShowUserContact';
+import { Button } from 'react-bootstrap';
+
 
 const ShowContact = () => {
     const[contacts,setContacts]=useState([])
@@ -9,19 +10,35 @@ const ShowContact = () => {
         .then(data=>setContacts(data))
     },[])
     return (
-        <div>
+        <table className="table table-striped" style={{color:'white',width:'40%', marginRight: "auto",marginLeft:'auto'}}>
+  <thead>
+    <tr>
+    
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Description</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+
+
               {
- contacts.map(contacts=><ShowUserContact
-  key={contacts._id}
-  contacts={contacts}
+ contacts.map(contacts=> <tbody >
+    <tr>
+     
+      <td style={{color:'white'}}>{contacts.Name}</td>
+      <td style={{color:'white'}}>{contacts.Email}</td>
+    <td style={{color:'white'}}> {contacts.description}</td>
+   
   
-  >
+    <td><Button variant='danger'>Delete</Button></td>
+    </tr>
 
-
-  </ShowUserContact>)
+    </tbody>
+    )
             }
         
-        </div>
+        </table>
     );
 };
 
