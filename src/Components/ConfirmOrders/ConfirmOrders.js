@@ -4,14 +4,14 @@ const ConfirmOrders = () => {
     const[orders,setOrders]=useState([])
   
     useEffect(()=>{
-        fetch('http://localhost:5000/orders')
+        fetch(' https://chilling-moonlight-57105.herokuapp.com/orders')
         .then(res=>res.json())
         .then(data=>setOrders(data))
     },[])
 
   const  handleDeleteOrder=(id)=>{
    
-fetch(`http://localhost:5000/orders/${id}`,{
+fetch(` https://chilling-moonlight-57105.herokuapp.com/orders/${id}`,{
   method:'DELETE'
 })
 .then(res=>res.json())

@@ -18,7 +18,7 @@ const AddReview = () => {
     formData.append('description', description);
     formData.append('image', image);
 
-fetch('http://localhost:5000/addreview', {
+fetch(' https://chilling-moonlight-57105.herokuapp.com/addreview', {
   method: 'POST',
   body: formData
 })

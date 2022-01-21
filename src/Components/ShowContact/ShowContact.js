@@ -5,7 +5,7 @@ import { Button } from 'react-bootstrap';
 const ShowContact = () => {
     const[contacts,setContacts]=useState([])
     useEffect(()=>{
-        fetch('http://localhost:5000/contact')
+        fetch(' https://chilling-moonlight-57105.herokuapp.com/contact')
         .then(res=>res.json())
         .then(data=>setContacts(data))
     },[])
@@ -14,7 +14,7 @@ const ShowContact = () => {
 
 const  handleDeleteContact=(id)=>{
    
-  fetch(`http://localhost:5000/contact/${id}`,{
+  fetch(` https://chilling-moonlight-57105.herokuapp.com/contact/${id}`,{
     method:'DELETE'
   })
   .then(res=>res.json())
