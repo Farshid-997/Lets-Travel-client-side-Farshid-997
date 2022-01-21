@@ -17,6 +17,7 @@ const Banner = () => {
     <Carousel.Caption>
       <div style={{marginBottom:'350px'}}>
       <h3> Want to Enjoy the WildLife in Africa?!!</h3>
+      
      <Button style={{color:'white'}} variant='outline-dark'>Book This Opportunity</Button>
       </div>
    

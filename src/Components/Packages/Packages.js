@@ -3,7 +3,7 @@ import { useParams } from 'react-router';
 import axios from 'axios';
 import { useForm } from "react-hook-form";
 import './Package.css'
-import { Link } from 'react-router-dom';
+
 const Packages = () => {
   const { register, handleSubmit,reset } = useForm();
     const { id } = useParams();
@@ -47,7 +47,7 @@ reset()
       <input type="text" {...register("NiDorPassport")} placeholder="Nid Or PassPort" />
       <input {...register("paymentMethod")} placeholder="Payment Option"/>
       <input type="submit" />
-   <Link to="/confirmOrders"> Submit</Link>  
+
     </form>
 
         </div>

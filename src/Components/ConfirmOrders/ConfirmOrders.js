@@ -9,7 +9,7 @@ const ConfirmOrders = () => {
         .then(data=>setOrders(data))
     },[])
 
-  const  handleDeleteUser=(id)=>{
+  const  handleDeleteOrder=(id)=>{
    
 fetch(`http://localhost:5000/orders/${id}`,{
   method:'DELETE'
@@ -53,7 +53,7 @@ setOrders(remainingOrders)
     <td style={{color:'white'}}>{orders.MobileNumber}</td>
     <td style={{color:'white'}}>{orders.NiDorPassport}</td>
     <td style={{color:'white'}}>{orders.paymentMethod}</td>
-    <td><Button variant='danger' onClick={()=>handleDeleteUser(orders._id)}>Delete</Button></td>
+    <td><Button variant='danger' onClick={()=>handleDeleteOrder(orders._id)}>Delete</Button></td>
     </tr>
 
     </tbody>

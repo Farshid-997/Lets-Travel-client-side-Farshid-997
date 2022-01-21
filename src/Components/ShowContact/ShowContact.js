@@ -9,6 +9,25 @@ const ShowContact = () => {
         .then(res=>res.json())
         .then(data=>setContacts(data))
     },[])
+
+//delete contact
+
+const  handleDeleteContact=(id)=>{
+   
+  fetch(`http://localhost:5000/contact/${id}`,{
+    method:'DELETE'
+  })
+  .then(res=>res.json())
+  .then(data=>{
+    if(data.deletedCount>0){
+  alert('Contact deleted successfully')
+  
+  const remainingContacts=contacts.filter(contact=>contact._id!==id)
+  setContacts(remainingContacts)
+    }
+  })
+  }
+
     return (
         <table className="table table-striped" style={{color:'white',width:'40%', marginRight: "auto",marginLeft:'auto'}}>
   <thead>
@@ -31,7 +50,7 @@ const ShowContact = () => {
     <td style={{color:'white'}}> {contacts.description}</td>
    
   
-    <td><Button variant='danger'>Delete</Button></td>
+    <td><Button variant='danger' onClick={()=>handleDeleteContact(contacts._id)}>Delete</Button></td>
     </tr>
 
     </tbody>
