@@ -23,7 +23,7 @@ const Service = () => {
          
 <div >
     <Container className="service-container">
-<Row xs={1} sm={1} md={3} className="g-5" style={{marginLeft:'5px',paddingLeft:'5px'}}>
+<Row xs={1} sm={1} md={2} lg={3} className="g-5" style={{marginLeft:'5px',paddingLeft:'5px'}}>
 {
                        services.map(service=> <ShowService
                         key={service.id}

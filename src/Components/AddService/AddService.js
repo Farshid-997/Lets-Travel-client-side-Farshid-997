@@ -1,5 +1,6 @@
 import React,{useState} from 'react';
 import { useForm } from "react-hook-form";
+
 import './AddService.css'
 const AddService = () => {
     const {reset} = useForm();
@@ -38,6 +39,7 @@ reset()
 }
     return (
         <div className="add-service">
+         
             <h2>Add a Service!!</h2>
     
 

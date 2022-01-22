@@ -1,5 +1,5 @@
 import React from 'react';
-import {  Col, Container, Row } from 'react-bootstrap';
+import {  Button, Col, Container, Row } from 'react-bootstrap';
 
 import useAuth from '../../Hooks/useAuth';
 import './Dashboard.css'
@@ -19,24 +19,32 @@ import ShowContact from '../ShowContact/ShowContact';
 import AddBlogs from '../Blog/AddBlogs';
 import AddService from '../AddService/AddService';
 import AddReview from '../AddReview/AddReview';
+
+
 const Dashboard = () => {
+    
     let { path, url } = useRouteMatch();
-    const{admin,user}=useAuth();
+    const{admin,user,logOut}=useAuth();
     return (
         <div>
+          <h2>Welcome to Dashboard</h2>
+         
    <Container>
    <Row>
     <Col>
     <div className="sidenav">
-      
+   
       {
           user.email&&
 
           <div>
             <h4>User's Dashboard</h4>
+       
 <Link to={`${url}/payment`}>Payment</Link><br/>
 <Link to={`${url}/addblog`}>Add Blogs</Link><br/>
 <Link to={`${url}/addreview`}>Add Review</Link><br/>
+
+<Button variant='danger' onClick={logOut}>LogOut</Button>
         </div>
       }
 
@@ -50,7 +58,7 @@ const Dashboard = () => {
   <Link to={`${url}/confirmorders`}>User Confirm Orders</Link><br/>
  <Link to={`${url}/makeadmin`}>Make Admin</Link><br/>
  <Link to={`${url}/showcontact`}>User Contact</Link><br/>
- 
+ <Button variant='success' onClick={logOut}>LogOut</Button>
 </div>
 
 }
@@ -70,6 +78,8 @@ const Dashboard = () => {
 
 <Switch>
        
+
+
 
         <Route path={`${path}/confirmorders`}>
      <ConfirmOrders></ConfirmOrders>

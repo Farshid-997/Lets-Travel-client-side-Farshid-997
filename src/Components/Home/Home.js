@@ -9,9 +9,11 @@ import Places from '../Places/Places';
 import Contact from '../Contacts/Contact';
 import Review from '../Review/Review';
 import Blogs from '../Blogs/Blogs';
+import Header from '../Header/Header';
 const Home = () => {
     return (
         <div>
+          <Header></Header>
            <Banner></Banner> 
          <Service></Service>
          <Offer></Offer>

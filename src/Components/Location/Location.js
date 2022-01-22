@@ -9,10 +9,12 @@ import img3 from './R (2).jpg'
 import img4 from './R.jpg'
 import './Location.css'
 import Typical from 'react-typical'
+import Header from '../Header/Header';
 SwiperCore.use([EffectCoverflow, Pagination]);
 const Location = () => {
     return (
         <div>
+          <Header></Header>
             <Typical
         steps={['Our Best Places in', 1000,  'Europe',2000]}
         loop={Infinity}

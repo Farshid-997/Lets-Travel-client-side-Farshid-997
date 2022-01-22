@@ -1,6 +1,9 @@
 import React from 'react';
 import './Footer.css'
-// import img1 from './23322.jpg'
+ import img1 from './23322.jpg'
+import { MdOutlineFacebook } from "react-icons/md";
+import { IoLogoTwitter,IoLogoLinkedin,IoMailOpenOutline} from "react-icons/io5";
+import { LinkContainer } from 'react-router-bootstrap';
 const Footer = () => {
     return (
         <div className="footer" style={{marginTop:'50px'}}>
@@ -10,36 +13,43 @@ const Footer = () => {
             <div className="contain">
 
                 <div className="col">
-                    <h1>Resources</h1>
+                    <h1 style={{color:'rgba(76, 223, 223, 0.925)'}}>Resources</h1>
                     <ul>
-                        <li>About Us</li>
-                        <li>Contact With us</li>
-                        <li>Blog</li>
+                      
+                        <LinkContainer to='/contact'>
+                        <li>Contact With Us</li>
+                        </LinkContainer>
+                       <LinkContainer to='/blog'>
+                       <li>Blog</li>
+                       </LinkContainer>
+                       
 
                     </ul>
                 </div>
                 <div className="col">
-                    <h1>Support</h1>
+                    <h1 style={{color:'rgba(76, 223, 223, 0.925)'}}>Support</h1>
                     <ul>
                         <li>Contact us</li>
-                        <li>Web chat</li>
+                       
                         <li>Appointment</li>
                     </ul>
                 </div>
                 <div className="col social">
-                    <h1>Social</h1>
+                    <h1 style={{color:'rgba(76, 223, 223, 0.925)'}}>Social</h1>
                     <ul>
-                        <li><img src="https://svgshare.com/i/5fq.svg" alt='' width="32" style={{ width: '32px' }}></img></li>
-                        <li><img src="https://svgshare.com/i/5eA.svg" alt='' width="32" style={{ width: '32px' }}></img></li>
-                        <li><img src="https://svgshare.com/i/5f_.svg" alt='' width="32" style={{ width: '32px' }}></img></li>
+                        <li style={{color:'rgba(76, 223, 223, 0.925)'}}><MdOutlineFacebook/></li>
+                        <li style={{color:'rgba(76, 223, 223, 0.925)',marginLeft:'5px'}}><IoLogoTwitter/></li>
+                        <li style={{color:'rgba(76, 223, 223, 0.925)'}}><IoLogoLinkedin/></li>
+                        <li style={{color:'rgba(76, 223, 223, 0.925)'}}><IoMailOpenOutline/></li>
+                        <img src={img1}  style={{width:'200px'}} alt="" />
                     </ul>
                 </div>
+
+              
                 <div className="clearfix"></div>
             </div>
 
-            {/* <div>
-                <img src={img1} style={{width:'150px'}}alt="" />
-            </div> */}
+           
         </div>
     </div>
     );

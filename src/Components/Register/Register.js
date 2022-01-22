@@ -4,6 +4,7 @@ import './Register.css';
 
 import useAuth from '../../Hooks/useAuth';
 import { Alert, Spinner } from 'react-bootstrap';
+import Header from '../Header/Header';
 const Register = () => {
 
   const [loginData,setLoginData]=useState({})
@@ -23,6 +24,7 @@ const Register = () => {
   }
     return (
         <div className="register">
+          <Header></Header>
                <h2>Please Register Here!!</h2>  
 
 

@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { Button } from 'react-bootstrap';
+
+import './ConfirmOrders.css'
 const ConfirmOrders = () => {
     const[orders,setOrders]=useState([])
+   
   
     useEffect(()=>{
         fetch(' https://chilling-moonlight-57105.herokuapp.com/orders')
@@ -25,9 +28,10 @@ setOrders(remainingOrders)
 })
 }
     return (
-     
-     
-      <table className="table table-striped" style={{color:'white',width:'40%', marginRight: "auto",marginLeft:'auto'}}>
+      <div>
+
+
+<table id='table'  className="tables table table-striped" style={{color:'white',width:'40%', marginRight: "auto",marginLeft:'auto'}}>
   <thead>
     <tr>
     
@@ -61,8 +65,13 @@ setOrders(remainingOrders)
             )
       }
   
-     </table>  
-       
+     </table> 
+      </div>
+     
+     
+     
+     
+    
     );
 };
 

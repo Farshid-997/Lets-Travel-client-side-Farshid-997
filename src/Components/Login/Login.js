@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Alert, Spinner } from 'react-bootstrap';
 import {useLocation,useHistory, NavLink } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
+import Header from '../Header/Header';
 
 import './Login.css';
 const Login = () => {
@@ -29,6 +30,7 @@ const handleLoginSubmit=(e)=>{
 
     return (
         <div className="login-form">
+            <Header></Header>
           <h2>Please Login Here!!</h2>  
 
   {

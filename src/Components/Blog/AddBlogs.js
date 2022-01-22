@@ -1,5 +1,6 @@
 import React,{useState} from 'react';
 import { useForm } from 'react-hook-form';
+import Header from '../Header/Header';
 import './Blog.css'
 const AddBlogs = () => {
     const {reset}=useForm()
@@ -36,6 +37,7 @@ reset()
     return (
    
           <div className='add-blog'>
+            <Header></Header>
            <h2>Write Your Blog</h2> 
 
          <form onSubmit={handleSubmit}>
