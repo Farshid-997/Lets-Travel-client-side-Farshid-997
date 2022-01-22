@@ -19,7 +19,8 @@ import ShowContact from '../ShowContact/ShowContact';
 import AddBlogs from '../Blog/AddBlogs';
 import AddService from '../AddService/AddService';
 import AddReview from '../AddReview/AddReview';
-
+import { LinkContainer } from 'react-router-bootstrap';
+import { AiTwotoneHome } from "react-icons/ai";
 
 const Dashboard = () => {
     
@@ -38,8 +39,11 @@ const Dashboard = () => {
           user.email&&
 
           <div>
+            <LinkContainer to='/home'>
+          
+      <AiTwotoneHome style={{width:'50px'}}/> 
+            </LinkContainer>
             <h4>User's Dashboard</h4>
-       
 <Link to={`${url}/payment`}>Payment</Link><br/>
 <Link to={`${url}/addblog`}>Add Blogs</Link><br/>
 <Link to={`${url}/addreview`}>Add Review</Link><br/>
