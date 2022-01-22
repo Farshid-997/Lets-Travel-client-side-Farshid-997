@@ -23,18 +23,25 @@ import { LinkContainer } from 'react-router-bootstrap';
 import { AiTwotoneHome } from "react-icons/ai";
 
 const Dashboard = () => {
-    
+  const closeNav=()=>{
+document.getElementById('sidenav').style.width='0px';
+  }
+  const openNav=()=>{
+    document.getElementById('sidenav').style.width='250px';
+    document.getElementById('main').style.marginLeft='250px';
+      }
     let { path, url } = useRouteMatch();
     const{admin,user,logOut}=useAuth();
     return (
-        <div>
+        <div id='main'>
+          <Button style={{width:'',margin:'5px'}}onClick={openNav}>☰ Open </Button>
           <h2>Welcome to Dashboard</h2>
          
    <Container>
    <Row>
     <Col>
-    <div className="sidenav">
-   
+    <div id='sidenav' className="sidenav">
+    <Button class="openbtn" onClick={closeNav}>X</Button> 
       {
           user.email&&
 

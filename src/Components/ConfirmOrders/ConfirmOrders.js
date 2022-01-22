@@ -31,7 +31,7 @@ setOrders(remainingOrders)
       <div>
 
 
-<table id='table'  className="tables table table-striped" style={{color:'white',width:'40%', marginRight: "auto",marginLeft:'auto'}}>
+<table id='table'  className="table table-striped" style={{color:'white',width:'40%', marginRight: "auto",marginLeft:'auto'}}>
   <thead>
     <tr>
     
