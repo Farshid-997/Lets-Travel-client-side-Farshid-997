@@ -4,6 +4,7 @@ import { useForm } from 'react-hook-form';
 import img1 from './world map.png'
 import './Contact.css'
 
+
 const Contact = () => {
   const { register, handleSubmit,reset } = useForm();
   const onSubmit = data =>{
@@ -20,7 +21,7 @@ reset()
   } 
     return (
         <div >
-           
+         
             <h2 style={{margin:'50px'}}>Contact With us!!</h2>
 
 <div className='contact' style={{display:'flex',justifyContent:'center',alignItems:'center'}}>

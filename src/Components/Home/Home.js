@@ -13,7 +13,7 @@ import Header from '../Header/Header';
 const Home = () => {
     return (
         <div>
-          <Header></Header>
+           <Header></Header>
            <Banner></Banner> 
          <Service></Service>
          <Offer></Offer>
