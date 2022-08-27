@@ -20,7 +20,13 @@ const Contact = () => {
   };
   return (
     <div>
-      <h2 style={{ margin: "50px", color: "gray" }}>Contact With us!!</h2>
+      <h2
+        style={{
+          margin: "50px",
+        }}
+      >
+        Contact With us!!
+      </h2>
 
       <div
         className="contact"
