@@ -22,9 +22,9 @@ const Header = () => {
                 <Nav.Link>Blog</Nav.Link>
               </LinkContainer>
 
-              <LinkContainer to="/contact">
+              {/* <LinkContainer to="/contact">
                 <Nav.Link>Contact</Nav.Link>
-              </LinkContainer>
+              </LinkContainer> */}
 
               <LinkContainer to="/register">
                 <Nav.Link>Register</Nav.Link>
