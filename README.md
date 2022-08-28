@@ -20,3 +20,4 @@
 16. Also I used fetch to get api from the server and showed data to the client side.
 17. Also I used Contex Api and firebase hooks .
 18. For Animation I used React typical,swiper and react reveal.
+19. Admin email :samin.yasar@gmail.com

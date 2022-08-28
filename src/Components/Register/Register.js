@@ -6,7 +6,7 @@ import toast, { Toaster } from "react-hot-toast";
 import useAuth from "../../Hooks/useAuth";
 // import { Alert, Spinner } from "react-bootstrap";
 import Header from "../Header/Header";
-import Footer from "../Footer/Footer";
+
 const Register = () => {
   const [loginData, setLoginData] = useState({});
   const history = useHistory();
@@ -39,6 +39,7 @@ const Register = () => {
               onChange={handleOnChange}
               name="firstname"
               placeholder="Your first name.."
+              required
             />
 
             <input
@@ -47,6 +48,7 @@ const Register = () => {
               onChange={handleOnChange}
               name="lastname"
               placeholder="Your last name.."
+              required
             />
 
             <input
@@ -55,6 +57,7 @@ const Register = () => {
               onChange={handleOnChange}
               name="email"
               placeholder=" Enter Your Email.."
+              required
             />
 
             <input
@@ -63,6 +66,7 @@ const Register = () => {
               onChange={handleOnChange}
               name="password"
               placeholder="Enter Your Password..."
+              required
             ></input>
 
             <input type="submit" value="Register" onClick={confirmUser} />
