@@ -10,7 +10,7 @@ const MakeAdmin = () => {
   const handleAdminSubmit = (e) => {
     e.preventDefault();
     const user = { email };
-    fetch(" https://chilling-moonlight-57105.herokuapp.com/users/admin", {
+    fetch(" https://branch-boggy-backbone.glitch.me/users/admin", {
       method: "PUT",
       headers: {
         "content-type": "application/json",

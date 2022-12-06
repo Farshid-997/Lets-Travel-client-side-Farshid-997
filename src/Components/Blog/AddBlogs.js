@@ -20,7 +20,7 @@ const AddBlogs = () => {
     formData.append("description", description);
     formData.append("image", image);
 
-    fetch("https://chilling-moonlight-57105.herokuapp.com/blog", {
+    fetch("https://branch-boggy-backbone.glitch.me/blog", {
       method: "POST",
       body: formData,
     })

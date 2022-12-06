@@ -5,7 +5,7 @@ import ShowBlog from "../ShowBlog/ShowBlog";
 const Blogs = () => {
   const [blogs, setBlogs] = useState([]);
   useEffect(() => {
-    fetch("https://chilling-moonlight-57105.herokuapp.com/blog")
+    fetch("https://branch-boggy-backbone.glitch.me/blog")
       .then((res) => res.json())
       .then((data) => setBlogs(data));
   }, []);

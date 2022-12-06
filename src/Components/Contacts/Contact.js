@@ -8,7 +8,7 @@ const Contact = () => {
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
     axios
-      .post("https://chilling-moonlight-57105.herokuapp.com/contact", data)
+      .post("https://branch-boggy-backbone.glitch.me/contact", data)
       .then((res) => {
         console.log(res);
 
